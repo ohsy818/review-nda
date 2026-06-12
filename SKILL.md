@@ -43,7 +43,7 @@ NDA(비밀유지계약서)의 법적 리스크를 체계적으로 검토하고, 
 
 **R02: Four Standard Exceptions + Independently Developed**
 - 4대 표준 예외: (1) 공개정보 (2) 기존 보유 (3) 제3자 적법 취득 (4) 법적 의무
-- ⚠️ "독자개발(Independently Developed)" 예외 누락 check — **모든 문서에서 발견됨**
+- ⚠️ "독자개발(Independently Developed)" 예외 누락 check — **자주 누락됨**
 - **권장**: 5번째 예외로 "공개 전후 모두 독자적으로 개발한 정보" 추가
 
 **R04: Liability Cap**
@@ -79,7 +79,7 @@ NDA(비밀유지계약서)의 법적 리스크를 체계적으로 검토하고, 
 
 **R08: Purpose Narrowing**
 - "any business discussion", "일체의 사업 협의" 등 광범위한 표현 check
-- 구체적 목적 ("M&A 실사", "SaaS API 통합 검토")으로 한정 권장
+- 구체적 목적 ("M&A 실사", "SaaS API 통합 검토", "의료 AI 진단보조 PoC 수행")으로 한정 권장
 
 **R11: Mutual NDA vs Unilateral Flow**
 - "Mutual" 표기지만 실제 정보 비대칭 확인
@@ -113,7 +113,7 @@ NDA(비밀유지계약서)의 법적 리스크를 체계적으로 검토하고, 
 #### 의료/헬스케어 데이터 포함 시 (연구협력/PoC)
 
 **DR01: Separate Data Processing Agreement**
-- 환자 의료데이터 포함 시 별도 개인정보 처리 위·수탁 계약 필수 (PIP A Art. 26)
+- 환자 의료데이터 포함 시 별도 개인정보 처리 위·수탁 계약 필수 (PIPA Art. 26)
 - 의료법 제19조 + 개인정보보호법 제23조 동시 적용
 
 **DR02: Anonymization Standards**
@@ -121,11 +121,13 @@ NDA(비밀유지계약서)의 법적 리스크를 체계적으로 검토하고, 
 - K-익명성, 차분 프라이시 등 기술적 기준 첨부
 
 **DR03: Specific Security Requirements**
-- "합리적인 수준"의 추상적 표현 대신 구체적 기준: ISMS-P, ISO 27701, 망분리, 암호화
+- "합리적인 수준"의 추상적 표현을 구체화: ISMS-P 또는 ISO/IEC 27001/27701 준수, 데이터 저장/전송 시 암호화(AES-256, TLS 1.2 이상), 강력한 접근통제(RBAC/MFA), 망분리 또는 동급의 네트워크 분리, 감사로그 보존(최소 1년)
+- 의료데이터 처리 시 역식별 금지, 테스트/개발 환경 반출 금지
 
 **DR04: Cross-Border Data Transfer**
-- 해외 클라우드 리전 시 PIPA Art. 28-8 준수
-- 환자 동의 확보 또는 국내 리전 한정 의무
+- 해외 클라우드 리전 사용 시 PIPA Art. 28-8 준수(국외이전 고지·동의, 적정성 평가, 보호조치 약정)
+- 환자 동의 확보 또는 국내 리전 한정 의무 명시
+- "처리 위치(국가)는 별도 협의"와 같은 포괄 표현 지양 → 계약서에 처리 리전(국가/리전) 명시
 
 **DR06: IP Ownership Clarity**
 - "공동 보유"는 상업화 장애 → 명확한 IP 분할 권장

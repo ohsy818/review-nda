@@ -1,5 +1,5 @@
 ---
-name: nda-review
+name: review-nda
 description: NDA(비밀유지계약서) 검토 스킬 — 23개 규칙 기반 법적 리스크 식별 및 수정안 제시
 ---
 
